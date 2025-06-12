@@ -2,12 +2,12 @@
 
 pragma solidity ^0.8.18;
 
-
-import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import {Initializable} from "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import {UUPSUpgradeable} from "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
-abstract contract BoxV1 is Initializable, OwnableUpgradeable, UUPSUpgradeable{
+
+contract BoxV1 is Initializable, OwnableUpgradeable, UUPSUpgradeable{
     uint256 internal number;
 
     constructor() {
