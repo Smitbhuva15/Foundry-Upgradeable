@@ -13,6 +13,11 @@ import {UUPSUpgradeable} from "@openzeppelin/contracts-upgradeable/proxy/utils/U
         return number;
     }
 
+        function setNumber(uint256 _number) internal {
+        number = _number;
+    }
+
+
 
     function version() public pure returns (uint256) {
         return 2;

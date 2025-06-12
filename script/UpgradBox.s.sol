@@ -23,8 +23,8 @@ contract UpgradBox is Script {
         address newBox
     ) public returns (address) {
         vm.startBroadcast();
-        BoxV1 proxy = BoxV1(proxyaddress);
-        proxy.upgradeTo(address(newBox));
+        BoxV1 proxy = BoxV1(proxyaddress);   // point to boxV1 contract
+        proxy.upgradeTo(address(newBox));    // upgrade and point to boxV2 contract
         vm.stopBroadcast();
         return address(proxy);
     }
